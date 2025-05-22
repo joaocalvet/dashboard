@@ -31,7 +31,7 @@ arquivo_subido = st.sidebar.file_uploader(label='Selecione um polígono a ser an
 compacto = st.sidebar.checkbox(label='Ativar modo compacto')
 
 EMBARGO = 'dados/embargos/embargos_ibama.parquet'
-DESMATAMENT0 = 'dados/mapbiomas/mapbiomas_alertas.parquet'
+DESMATAMENTO = 'dados/mapbiomas/mapbiomas_alertas.parquet'
 TIS = 'dados/tis_poligonais/tis.parquet'
 
 if arquivo_subido:
@@ -56,7 +56,7 @@ if arquivo_subido and not compacto:
     
     @st.cache_resource
     def abrir_desmatamento(): 
-        gdf_desmat = gpd.read_parquet(DESMATAMENT0)
+        gdf_desmat = gpd.read_parquet(DESMATAMENTO)
         return gdf_desmat
     
     @st.cache_resource
@@ -221,7 +221,7 @@ elif arquivo_subido and compacto:
     
     @st.cache_resource
     def abrir_desmatamento(): 
-        gdf_desmat = gpd.read_parquet(DESMATAMENT0)
+        gdf_desmat = gpd.read_parquet(DESMATAMENTO)
         return gdf_desmat
     
     @st.cache_resource
