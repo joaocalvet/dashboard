@@ -30,7 +30,7 @@ arquivo_subido = st.sidebar.file_uploader(label='Selecione um polígono a ser an
 
 compacto = st.sidebar.checkbox(label='Ativar modo compacto')
 
-EMBARGO = 'dados\embargos\embargos_ibama.parquet'
+EMBARGO = 'dados/embargos/embargos_ibama.parquet'
 DESMATAMENT0 = 'dados/mapbiomas/mapbiomas_alertas.parquet'
 TIS = 'dados/tis_poligonais/tis.parquet'
 
